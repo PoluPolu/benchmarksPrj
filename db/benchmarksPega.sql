@@ -23,4 +23,5 @@ CREATE TABLE public.benchmarks (
 );
 
 truncate benchmarks;
-select * from benchmarks b ;
+select * from public."benchmarks" ba ;
+

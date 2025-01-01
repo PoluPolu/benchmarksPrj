@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmarks</title>
+</head>
+<body>
+    <h1>Benchmarks</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Kind</th>
+                <th>Enabled</th>
+                <th>Branches</th>
+                <th>Priority</th>
+                <th>Cycle</th>
+                <th>Offset</th>
+                <th>URL</th>
+                <th>Email</th>
+                <th>Issues</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.BName}}</td>
+                <td>{{.BType}}</td>
+                <td>{{.Kind}}</td>
+                <td>{{.Enabled}}</td>
+                <td>{{range .Branches}}{{.}}, {{end}}</td>
+                <td>{{.Priority}}</td>
+                <td>{{.BCycle}}</td>
+                <td>{{.BOffset}}</td>
+                <td>{{.BURL}}</td>
+                <td>{{.NotificationEmail}}</td>
+                <td>{{.Issues}}</td>
+                <td>{{.Notes}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+</html>

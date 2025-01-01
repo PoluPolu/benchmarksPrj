@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Using port 8081!")
+}
+
+func main() {
+	fmt.Println("Starting server on port 8081...")
+	log.Fatal(http.ListenAndServe(":8081", nil))
+}
